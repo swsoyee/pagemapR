@@ -1,2 +1,4 @@
+^renv$
+^renv\.lock$
 ^pagemap\.Rproj$
 ^\.Rproj\.user$
