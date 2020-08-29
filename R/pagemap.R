@@ -5,19 +5,19 @@
 #' @import htmlwidgets
 #'
 #' @export
-pagemap <- function(message, width = NULL, height = NULL, elementId = NULL) {
+pagemap <- function(id, elementId = NULL) {
 
   # forward options using x
   x = list(
-    message = message
+    id = id
   )
 
   # create widget
   htmlwidgets::createWidget(
     name = 'pagemap',
     x,
-    width = width,
-    height = height,
+    width = 0,
+    height = 0,
     package = 'pagemap',
     elementId = elementId
   )
@@ -40,8 +40,8 @@ pagemap <- function(message, width = NULL, height = NULL, elementId = NULL) {
 #' @name pagemap-shiny
 #'
 #' @export
-pagemapOutput <- function(outputId, width = '100%', height = '400px'){
-  htmlwidgets::shinyWidgetOutput(outputId, 'pagemap', width, height, package = 'pagemap')
+pagemapOutput <- function(outputId){
+  htmlwidgets::shinyWidgetOutput(outputId, 'pagemap', package = 'pagemap')
 }
 
 #' @rdname pagemap-shiny
