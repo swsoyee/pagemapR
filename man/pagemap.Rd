@@ -2,10 +2,19 @@
 % Please edit documentation in R/pagemap.R
 \name{pagemap}
 \alias{pagemap}
-\title{<Add Title>}
+\title{Mini Map of Page}
 \usage{
-pagemap(message, width = NULL, height = NULL, elementId = NULL)
+pagemap(id, box_style = list(), ..., elementId = NULL)
+}
+\arguments{
+\item{id}{\code{string} id for canvas mini map.}
+
+\item{box_style}{a \code{list} of css propery of mini map box.}
+
+\item{...}{additional options passed to \code{pagemap}.}
+
+\item{elementId}{\code{string} id as a valid \code{CSS} element id.}
 }
 \description{
-<Add Description>
+Create mini map for single web page.
 }
