@@ -1,14 +1,21 @@
-# pagemapR
+---
+title: "pagemapR"
+output: html_document
+---
 
 This is an R package that provides support for [pagemap](https://larsjung.de/pagemap/) as a [htmlwidget](http://htmlwidgets.org/).
 
 Quickly and easily add a mini map to your long rmarkdown html report.
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 ## Installation
 
 `pagemapR` is not on CRAN now (may be later), you can use `devtools` to install the latest development version.
 
-```r
+```{r installation, eval=FALSE}
 library(devtools)
 install_github('swsoyee/pagemapR')
 ```
@@ -17,20 +24,20 @@ install_github('swsoyee/pagemapR')
 
 It's very simple to use.
 
-```r
+```{r usage}
 pagemap::pagemap(id = "mini_map")
 ```
 
 You could fix it's position on the screen and style by providing a `list` of css property.
 
-```r
+```{r box_style}
 pagemap::pagemap(id = "mini_map",
                  box_style = list(left = "5px", top = "10px"))
 ```
 
 You could also customize the internal style of the mini map through the API provided by [`pagemap`](https://larsjung.de/pagemap/).
 
-```r
+```{r customize_pagemap}
 pagemap::pagemap(
   id = "mini_map",
   styles = list(
