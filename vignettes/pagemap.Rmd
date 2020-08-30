@@ -16,14 +16,14 @@ output:
 %\VignetteIndexEntry{Introduction to pagemap}
 -->
 
-```{r setup, echo=FALSE, results='asis'}
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE, esults='asis'}
 if (!knitr::is_html_output(excludes = "markdown")) {
   knitr::opts_chunk$set(eval = FALSE)
   logo_path <- "./vignettes/pagemap.png"
   cat("# pagemapR")
 } else {
   library(devtools)
-  install_github('swsoyee/pagemapR')
+  install_github('swsoyee/pagemapR', quiet = TRUE)
   logo_path <- "./pagemap.png"
 }
 ```
@@ -90,6 +90,7 @@ cat(
 
 <!-- badges: start -->
 [![R build status](https://github.com/swsoyee/pagemapR/workflows/R-CMD-check/badge.svg)](https://github.com/swsoyee/pagemapR/actions)
+[![Github last commit](https://img.shields.io/github/last-commit/swsoyee/pagemapR?logo=github)](https://github.com/swsoyee/pagemapR)
 <!-- badges: end -->
 
 ## Introduction
