@@ -16,7 +16,8 @@ Suggests:
     shiny,
     ggplot2,
     hexSticker,
-    showtext
+    showtext,
+    devtools
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
