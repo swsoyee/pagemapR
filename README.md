@@ -3,7 +3,8 @@
 %\VignetteIndexEntry{Introduction to pagemap}
 -->
 
-    ## # pagemapR
+pagemapR
+========
 
 <img src='./vignettes/pagemap.png' width='180' align='right' style='max-width:50%;margin-left:20px;'>
 
