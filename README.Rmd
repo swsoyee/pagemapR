@@ -1,6 +1,8 @@
 ---
 title: "pagemapR"
-output: html_document
+output: 
+  html_document: 
+    theme: flatly
 ---
 
 ```{r generate_hex_sticker, echo=FALSE, warning=FALSE, message=FALSE}
@@ -80,13 +82,13 @@ install_github('swsoyee/pagemapR')
 
 It's very simple to use.
 
-```{r usage}
+```{r usage, eval=FALSE}
 pagemap::pagemap(id = "mini_map")
 ```
 
 You could fix it's position on the screen and style by providing a `list` of css property.
 
-```{r box_style}
+```{r box_style, eval=FALSE}
 pagemap::pagemap(id = "mini_map",
                  box_style = list(left = "5px", top = "10px"))
 ```
