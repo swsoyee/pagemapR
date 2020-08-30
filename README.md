@@ -1,8 +1,12 @@
 # pagemapR
 
+<img src="./inst/img/pagemap.png" width="200" align="right" style="max-width: 50%;margin-left:20px;">
+
 This is an R package that provides support for [pagemap](https://larsjung.de/pagemap/) as a [htmlwidget](http://htmlwidgets.org/).
 
 Quickly and easily add a mini map to your long rmarkdown html report.
+
+> Note: To distinguish it from the [original project `pagemap`](https://larsjung.de/pagemap/), the name of this project is `pagemapR`, but the package name is `pagemap`.
 
 ## Installation
 
