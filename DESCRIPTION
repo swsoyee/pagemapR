@@ -14,9 +14,6 @@ Suggests:
     knitr,
     rmarkdown,
     shiny,
-    ggplot2,
-    hexSticker,
-    showtext,
     devtools
 License: MIT + file LICENSE
 Encoding: UTF-8
