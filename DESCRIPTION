@@ -1,13 +1,19 @@
 Package: pagemap
-Title: Create Mini Map for Web Pages.
+Type: Package
+Title: Create Mini Map for Web Pages
 Version: 0.1.0
-Authors@R: 
-    person(given = "Wei",
-           family = "Su",
-           role = c("aut", "cre"),
-           email = "swsoyee@gmail.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Quickly and easily add a mini map to your long rmarkdown html report.
+Date: 2020-08-29
+Authors@R: c(
+    person(given = "Wei", family = "Su", role = c("aut", "cre"), email = "swsoyee@gmail.com"),
+    person(given = "Lars", family = "Jung", role = c("aut", "cph"), comment = "pagemap library in htmlwidgets/lib, https://github.com/lrsjng/pagemap"))
+Maintainer: Wei Su <swsoyee@gmail.com>
+Description: Quickly and easily add a mini map to your rmarkdown html documents.
+Imports:
+    htmlwidgets
+Suggests:
+    knitr,
+    rmarkdown,
+    shiny
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
