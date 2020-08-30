@@ -86,6 +86,10 @@ cat(
 )
 ```
 
+<!-- badges: start -->
+[![R build status](https://github.com/swsoyee/pagemapR/workflows/R-CMD-check/badge.svg)](https://github.com/swsoyee/pagemapR/actions)
+<!-- badges: end -->
+
 ## Introduction
 
 This is an R package that provides support for [`pagemap`](https://larsjung.de/pagemap/) as a [`htmlwidget`](http://htmlwidgets.org/).  
