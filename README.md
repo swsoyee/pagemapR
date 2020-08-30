@@ -3,17 +3,22 @@
 %\VignetteIndexEntry{Introduction to pagemap}
 -->
 
-pagemapR
-========
+    ## # pagemapR
 
-<img src='./vignettes/pagemap.png' width='200' align='right' style='max-width:50%;margin-left:20px;'>
+<img src='./vignettes/pagemap.png' width='180' align='right' style='max-width:50%;margin-left:20px;'>
+
+<!-- badges: start -->
+
+[![R build status](https://github.com/swsoyee/pagemapR/workflows/R-CMD-check/badge.svg)](https://github.com/swsoyee/pagemapR/actions)
+[![Github last commit](https://img.shields.io/github/last-commit/swsoyee/pagemapR?logo=github)](https://github.com/swsoyee/pagemapR)
+<!-- badges: end -->
 
 Introduction
 ------------
 
-This is an R package that provides support for [`pagemap`](https://larsjung.de/pagemap/) as a [`htmlwidget`](http://htmlwidgets.org/).
-
+This is an R package that provides support for [`pagemap`](https://larsjung.de/pagemap/) as a [`htmlwidget`](http://htmlwidgets.org/).  
 Quickly and easily add a mini map to your rmarkdown `html` documents.
+See a demonstration [here](https://swsoyee.github.io/pagemapR/).
 
 > Note: To distinguish it from the [original project `pagemap`](https://larsjung.de/pagemap/), the name of this project is `pagemapR`, but the package name is `pagemap`.
 
@@ -70,3 +75,8 @@ You are welcome to:
     <a href="https://github.com/swsoyee/pagemapR/issues" class="uri">https://github.com/swsoyee/pagemapR/issues</a>
 -   Send a pull request on: <a href="https://github.com/swsoyee/pagemapR" class="uri">https://github.com/swsoyee/pagemapR</a>
 -   Compose a friendly e-mail to: <a href="mailto:swsoyee@gmail.com" class="email">swsoyee@gmail.com</a>
+
+Code of Conduct
+---------------
+
+Please note that this project is released with a [Contributor Code of Conduct](https://github.com/swsoyee/pagemapR/blob/master/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
