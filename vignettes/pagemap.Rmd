@@ -22,6 +22,7 @@ if (!knitr::is_html_output(excludes = "markdown")) {
   logo_path <- "./vignettes/pagemap.png"
   cat("# pagemapR")
 } else {
+  devtools::install_github('swsoyee/pagemapR')
   logo_path <- "./pagemap.png"
 }
 ```
