@@ -16,7 +16,7 @@ output:
 %\VignetteIndexEntry{Introduction to pagemap}
 -->
 
-```{r setup, echo=FALSE, message=FALSE, warning=FALSE, esults='asis'}
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 if (!knitr::is_html_output(excludes = "markdown")) {
   knitr::opts_chunk$set(eval = FALSE)
   logo_path <- "./vignettes/pagemap.png"
