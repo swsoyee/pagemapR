@@ -13,8 +13,12 @@ pagemap(id, box_style = list(), ..., elementId = NULL)
 
 \item{...}{additional options passed to \code{pagemap}.}
 
-\item{elementId}{\code{string} id as a valid \code{CSS} element id.}
+\item{elementId}{\code{string} id as a valid \code{CSS} element id for htmlwidgets.}
 }
 \description{
 Create mini map for single web page.
+}
+\examples{
+library(pagemap)
+pagemap(id = "mini_map")
 }

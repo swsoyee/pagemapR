@@ -5,10 +5,12 @@
 #' @param id \code{string} id for canvas mini map.
 #' @param box_style a \code{list} of css propery of mini map box.
 #' @param ... additional options passed to \code{pagemap}.
-#' @param elementId \code{string} id as a valid \code{CSS} element id.
+#' @param elementId \code{string} id as a valid \code{CSS} element id for htmlwidgets.
 #'
 #' @import htmlwidgets
-#'
+#' @examples
+#' library(pagemap)
+#' pagemap(id = "mini_map")
 #' @export
 pagemap <- function(id,
                     box_style = list(),
