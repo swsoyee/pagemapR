@@ -1,0 +1,32 @@
+name: 'update readme'
+
+on:
+  pull_request:
+    paths:
+      - vignettes/pagemap.Rmd
+    branches: [master]
+
+jobs:
+  bot:
+    name: Update Readme
+    runs-on: macOS-latest
+    steps:
+      - name: 'Checkout codes'
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: 'Setup R environment'
+        uses: r-lib/actions/setup-r@v1
+        with:
+          r-version: '4.0.2'
+      - uses: r-lib/actions/setup-pandoc@v1
+      - name: Install package dependencies
+        run: |-
+          Rscript -e "install.packages('renv'); renv::restore(confirm = FALSE)"
+      - name: Run script
+        run: |
+          Rscript -e 'source("chore.R")'
+      - name: Git auto commit
+        uses: stefanzweifel/git-auto-commit-action@v4.1.6
+        with:
+          commit_message: 'update: readme'
