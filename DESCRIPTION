@@ -7,13 +7,13 @@ Authors@R: c(
     person(given = "Wei", family = "Su", role = c("aut", "cre"), email = "swsoyee@gmail.com"),
     person(given = "Lars", family = "Jung", role = c("aut", "cph"), comment = "pagemap library in htmlwidgets/lib, https://github.com/lrsjng/pagemap"))
 Maintainer: Wei Su <swsoyee@gmail.com>
-Description: Quickly and easily add a mini map to your rmarkdown html documents.
+Description: Quickly and easily add a mini map to your 'rmarkdown' html documents.
 Imports:
     htmlwidgets
 Suggests:
     knitr,
-    rmarkdown,
     shiny,
+    rmarkdown,
     devtools
 License: MIT + file LICENSE
 Encoding: UTF-8

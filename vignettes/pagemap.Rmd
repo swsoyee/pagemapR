@@ -44,7 +44,7 @@ cat(
 
 ## Introduction
 
-This is an R package that provides support for [`pagemap`](https://larsjung.de/pagemap/) as a [`htmlwidget`](http://htmlwidgets.org/).  
+This is an R package that provides support for [`pagemap`](https://larsjung.de/pagemap/) as a [`htmlwidgets`](https://www.htmlwidgets.org/).  
 Quickly and easily add a mini map to your rmarkdown `html` documents. 
 See a demonstration [here](https://swsoyee.github.io/pagemapR/).
 
