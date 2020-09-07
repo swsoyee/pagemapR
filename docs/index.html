@@ -2495,21 +2495,31 @@ devtools::install_github(&#39;swsoyee/pagemapR&#39;)</code></pre>
 <div id="usage" class="section level2">
 <h2>Usage</h2>
 <p>It’s very simple to use.</p>
-<pre class="r"><code>pagemap::pagemap(id = &quot;mini_map&quot;)</code></pre>
+<pre class="r"><code>library(pagemap)
+pagemap()</code></pre>
 <p>You could fix it’s position on the screen and style by providing a <code>list</code> of css property.</p>
-<pre class="r"><code>pagemap::pagemap(id = &quot;mini_map&quot;,
-                 box_style = list(left = &quot;5px&quot;, top = &quot;10px&quot;))</code></pre>
+<pre class="r"><code>pagemap(id = &quot;mini_map&quot;,
+        box_style = list(left = &quot;5px&quot;, top = &quot;10px&quot;))</code></pre>
 <p>You could also customize the internal style of the mini map through the API provided by <a href="https://larsjung.de/pagemap/"><code>pagemap</code></a>.</p>
-<pre class="r"><code>pagemap::pagemap(
+<pre class="r"><code>pagemap(
   id = &quot;mini_map&quot;,
   styles = list(
-    &#39;h1,h2,a,code&#39; = &#39;rgba(0,0,0,0.10)&#39;,
+    &#39;h1,h2,a,code&#39; = &#39;rgba(0, 0, 0, 0.10)&#39;,
     &#39;img&#39; = &#39;rgba(0, 0, 0, 0.08)&#39;,
-    &#39;pre&#39; = &#39;rgba(0,0,0,0.04)&#39;
+    &#39;pre&#39; = &#39;rgba(0, 0, 0, 0.04)&#39;
   )
 )</code></pre>
-<div id="htmlwidget-f44aa3ae9ac68b1c32f3" style="width:0px;height:0px;" class="pagemap html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f44aa3ae9ac68b1c32f3">{"x":{"id":"mini_map","style":"position:fixed;top:5px;right:5px;width:200px;height:100%;z-index:100;","options":{"styles":{"h1,h2,a,code":"rgba(0,0,0,0.10)","img":"rgba(0, 0, 0, 0.08)","pre":"rgba(0,0,0,0.04)"}}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c3d12ba5fc8c4ac3c4e4" style="width:0px;height:0px;" class="pagemap html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c3d12ba5fc8c4ac3c4e4">{"x":{"id":"mini_map","style":"position:fixed;top:5px;right:5px;width:200px;height:100%;z-index:100;","options":{"styles":{"h1,h2,a,code":"rgba(0, 0, 0, 0.10)","img":"rgba(0, 0, 0, 0.08)","pre":"rgba(0, 0, 0, 0.04)"}}},"evals":[],"jsHooks":[]}</script>
+<p>Or add a pagemap for your Shiny app:</p>
+<pre class="r"><code>if (interactive()) {
+  shinyApp(
+    ui = fluidPage(pagemapOutput(&quot;pagemap&quot;)),
+    server = function(input, output) {
+      output$pagemap &lt;- renderPagemap(pagemap())
+    }
+  )
+}</code></pre>
 </div>
 <div id="credit" class="section level2">
 <h2>Credit</h2>

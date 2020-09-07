@@ -6,12 +6,16 @@
 \alias{renderPagemap}
 \title{Shiny bindings for pagemap}
 \usage{
-pagemapOutput(outputId)
+pagemapOutput(outputId, width = "100\%", height = "auto")
 
 renderPagemap(expr, env = parent.frame(), quoted = FALSE)
 }
 \arguments{
-\item{outputId}{output variable to read from}
+\item{outputId}{output variable to read from.}
+
+\item{width, height}{Fixed width for pagemap (in css units). Ignored when used in
+a Shiny app. It is not recommended to use this parameter because the widget knows
+how to adjust its width automatically.}
 
 \item{expr}{An expression that generates a pagemap}
 
@@ -23,4 +27,20 @@ is useful if you want to save an expression in a variable.}
 \description{
 Output and render functions for using pagemap within Shiny
 applications and interactive Rmd documents.
+}
+\examples{
+library(shiny)
+
+## Only run this example in interactive R sessions
+if (interactive()) {
+ shinyApp(
+   ui = fluidPage(pagemapOutput("pagemap")),
+   server = function(input, output) {
+     output$pagemap <- renderPagemap(pagemap())
+   }
+ )
+}
+}
+\seealso{
+\code{\link{pagemap}}
 }

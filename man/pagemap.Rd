@@ -7,9 +7,11 @@
 pagemap(id, box_style = list(), ..., elementId = NULL)
 }
 \arguments{
-\item{id}{\code{string} id for canvas mini map.}
+\item{id}{\code{string} id for canvas mini map. Default is 10 randomly generated
+letters.}
 
-\item{box_style}{a \code{list} of css propery of mini map box.}
+\item{box_style}{a \code{list} of css propery of mini map box. If not provided,
+default values are used.}
 
 \item{...}{additional options passed to \code{pagemap}.}
 
@@ -20,5 +22,23 @@ Create mini map for single web page.
 }
 \examples{
 library(pagemap)
-pagemap(id = "mini_map")
+# Most basic usage
+pagemap()
+
+# Fix it’s position on the screen
+pagemap(id = "mini_map",
+     box_style = list(left = "5px", top = "10px"))
+
+# Style by providing a list of css property
+pagemap(
+  id = "mini_map",
+  styles = list(
+    'h1,h2,a,code' = 'rgba(0, 0, 0, 0.10)',
+    'img' = 'rgba(0, 0, 0, 0.08)',
+    'pre' = 'rgba(0, 0, 0, 0.04)'
+  )
+)
+}
+\seealso{
+\href{https://larsjung.de/pagemap/}{Pagemap home page}.
 }

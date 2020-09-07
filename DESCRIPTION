@@ -1,8 +1,8 @@
 Package: pagemap
 Type: Package
 Title: Create Mini Map for Web Pages
-Version: 0.1.0
-Date: 2020-08-29
+Version: 0.1.1
+Date: 2020-09-07
 Authors@R: c(
     person(given = "Wei", family = "Su", role = c("aut", "cre"), email = "swsoyee@gmail.com"),
     person(given = "Lars", family = "Jung", role = c("aut", "cph"), comment = "pagemap library in htmlwidgets/lib, https://github.com/lrsjng/pagemap"))
