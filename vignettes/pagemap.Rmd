@@ -54,7 +54,7 @@ See a demonstration [here](https://swsoyee.github.io/pagemapR/).
 
 ## Installation
 
-```{r installation cran}
+```{r installation cran, eval=FALSE}
 install.packages("pagemap")
 ```
 
