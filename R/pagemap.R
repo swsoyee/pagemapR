@@ -20,16 +20,18 @@
 #' pagemap()
 #'
 #' # Fix it’s position on the screen
-#' pagemap(id = "mini_map",
-#'      box_style = list(left = "5px", top = "10px"))
+#' pagemap(
+#'   id = "mini_map",
+#'   box_style = list(left = "5px", top = "10px")
+#' )
 #'
 #' # Style by providing a list of css property
 #' pagemap(
 #'   id = "mini_map",
 #'   styles = list(
-#'     'h1,h2,a,code' = 'rgba(0, 0, 0, 0.10)',
-#'     'img' = 'rgba(0, 0, 0, 0.08)',
-#'     'pre' = 'rgba(0, 0, 0, 0.04)'
+#'     "h1,h2,a,code" = "rgba(0, 0, 0, 0.10)",
+#'     "img" = "rgba(0, 0, 0, 0.08)",
+#'     "pre" = "rgba(0, 0, 0, 0.04)"
 #'   )
 #' )
 #' @export
@@ -37,17 +39,18 @@ pagemap <- function(id,
                     box_style = list(),
                     ...,
                     elementId = NULL) {
-  if (missing(id))
+  if (missing(id)) {
     id <- paste0(sample(letters, size = 10), collapse = "")
+  }
 
   # Settings of canvas box positions
   default_box_style <- list(
-    position = 'fixed',
-    top = '5px',
-    right = '5px',
-    width = '200px',
-    height = '100%',
-    `z-index` = '100'
+    position = "fixed",
+    top = "5px",
+    right = "5px",
+    width = "200px",
+    height = "100%",
+    `z-index` = "100"
   )
   box_style <-
     append(box_style, default_box_style[!names(default_box_style) %in% names(box_style)])
@@ -55,19 +58,21 @@ pagemap <- function(id,
     paste0(names(box_style), ":", box_style, ";", collapse = "")
 
   # forward options using params
-  params <- list(id = id,
-                 style = box_style_string,
-                 options = list(...))
+  params <- list(
+    id = id,
+    style = box_style_string,
+    options = list(...)
+  )
 
   params <- Filter(Negate(is.null), params)
 
   # create widget
   htmlwidgets::createWidget(
-    name = 'pagemap',
+    name = "pagemap",
     params,
     width = 0,
     height = 0,
-    package = 'pagemap',
+    package = "pagemap",
     elementId = elementId
   )
 }
@@ -92,22 +97,22 @@ pagemap <- function(id,
 #'
 #' @export
 #' @examples
-#'library(shiny)
+#' library(shiny)
 #'
-#'## Only run this example in interactive R sessions
-#'if (interactive()) {
-#'  shinyApp(
-#'    ui = fluidPage(pagemapOutput("pagemap")),
-#'    server = function(input, output) {
-#'      output$pagemap <- renderPagemap(pagemap())
-#'    }
-#'  )
-#'}
+#' ## Only run this example in interactive R sessions
+#' if (interactive()) {
+#'   shinyApp(
+#'     ui = fluidPage(pagemapOutput("pagemap")),
+#'     server = function(input, output) {
+#'       output$pagemap <- renderPagemap(pagemap())
+#'     }
+#'   )
+#' }
 pagemapOutput <-
   function(outputId,
-           width = '100%',
-           height = 'auto') {
-    htmlwidgets::shinyWidgetOutput(outputId, 'pagemap', width, height, package = 'pagemap')
+           width = "100%",
+           height = "auto") {
+    htmlwidgets::shinyWidgetOutput(outputId, "pagemap", width, height, package = "pagemap")
   }
 
 #' @rdname pagemap-shiny
