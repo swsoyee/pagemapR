@@ -26,16 +26,18 @@ library(pagemap)
 pagemap()
 
 # Fix it’s position on the screen
-pagemap(id = "mini_map",
-     box_style = list(left = "5px", top = "10px"))
+pagemap(
+  id = "mini_map",
+  box_style = list(left = "5px", top = "10px")
+)
 
 # Style by providing a list of css property
 pagemap(
   id = "mini_map",
   styles = list(
-    'h1,h2,a,code' = 'rgba(0, 0, 0, 0.10)',
-    'img' = 'rgba(0, 0, 0, 0.08)',
-    'pre' = 'rgba(0, 0, 0, 0.04)'
+    "h1,h2,a,code" = "rgba(0, 0, 0, 0.10)",
+    "img" = "rgba(0, 0, 0, 0.08)",
+    "pre" = "rgba(0, 0, 0, 0.04)"
   )
 )
 }

@@ -33,12 +33,12 @@ library(shiny)
 
 ## Only run this example in interactive R sessions
 if (interactive()) {
- shinyApp(
-   ui = fluidPage(pagemapOutput("pagemap")),
-   server = function(input, output) {
-     output$pagemap <- renderPagemap(pagemap())
-   }
- )
+  shinyApp(
+    ui = fluidPage(pagemapOutput("pagemap")),
+    server = function(input, output) {
+      output$pagemap <- renderPagemap(pagemap())
+    }
+  )
 }
 }
 \seealso{

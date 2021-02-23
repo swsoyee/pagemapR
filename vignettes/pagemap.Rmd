@@ -31,7 +31,7 @@ if (!knitr::is_html_output(excludes = "markdown")) {
 ```{r logo, echo=FALSE, results='asis', eval=TRUE}
 cat(
   sprintf(
-    "<img src='%s' width='180' align='right' style='max-width:50%%;margin-left:20px;'>",
+    "<img src='%s' width='150' align='right' style='max-width:50%%;margin-left:20px;'>",
     logo_path
   )
 )
