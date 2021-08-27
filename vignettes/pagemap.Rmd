@@ -3,8 +3,6 @@ title: "Introduction to pagemap"
 author: "Wei Su"
 date: "`r Sys.Date()`"
 output:
-  # md_document:
-  #   pandoc_args: ["--wrap=preserve"]
   html_document:
     theme: flatly
     toc: true
@@ -20,18 +18,13 @@ output:
 if (!knitr::is_html_output(excludes = "markdown")) {
   knitr::opts_chunk$set(eval = FALSE)
   logo_path <- "./vignettes/pagemap.png"
-  cat("# pagemapR")
 } else {
-  install.packages(
-    "pagemap",
-    repos = "http://cran.us.r-project.org",
-    quiet = TRUE
-  )
   logo_path <- "./pagemap.png"
 }
 ```
 
 ```{r logo, echo=FALSE, results='asis', eval=TRUE}
+cat("# pagemapR\n")
 cat(
   sprintf(
     "<img src='%s' width='150' align='right'>",

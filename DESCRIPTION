@@ -1,8 +1,8 @@
 Package: pagemap
 Type: Package
 Title: Create Mini Map for Web Pages
-Version: 0.1.2
-Date: 2021-08-12
+Version: 0.1.3
+Date: 2021-08-28
 Authors@R: c(
     person(
         given = "Wei",
